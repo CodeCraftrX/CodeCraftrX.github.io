@@ -462,3 +462,855 @@ blockquote p {
   padding-left: 20px;
   font-size: 1.25rem;
 }
+
+.interests-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.interest-card {
+  flex: 0 1 calc(33.333% - 2rem);
+  min-width: 250px;
+  max-width: 350px;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+  transform: translateY(-5px);
+}
+
+.interest-card .image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.interest-card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.interest-card:hover .image img {
+  transform: scale(1.1);
+}
+
+.interest-card header {
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #dc3545, #ff4d5a);
+  color: white;
+}
+
+.interest-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.interest-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Only stack cards on very small screens */
+@media (max-width: 992px) {
+  .interests-container {
+    flex-wrap: wrap;
+  }
+  
+  .interest-card {
+    flex: 0 1 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* Name styling */
+.resume-section-content h1.mb-0.intro {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 1rem !important;
+    color: #333333 !important;
+}
+
+/* First part of name (ABHEESHT REDDY) */
+.resume-section-content h1.mb-0.intro .text-primary {
+    color: #333333 !important; /* Dark color for better visibility */
+}
+
+/* Last part of name (YANAMALA) */
+.resume-section-content h1.mb-0.intro .text-danger {
+    color: #dc3545 !important; /* Bootstrap's danger red */
+}
+
+/* Make sure the text has enough contrast against dark background */
+.resume-section-content h1.mb-0.intro {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.resume-section-content .subheading.mb-5 {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+/* Style for the name */
+.mb-0.intro {
+    color: white;
+}
+
+.mb-0.intro .text-danger {
+    color: #dc3545 !important;
+}
+
+/* Style for contact info */
+.subheading.mb-5 {
+    color: #a8a8a8;
+}
+
+.subheading.mb-5 a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.subheading.mb-5 a:hover {
+    color: #bb2d3b;
+    text-decoration: underline;
+}
+
+/* Center social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* About text alignment */
+.lead.mb-5 {
+    text-align: justify;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+/* Achievements Section */
+#achievements {
+    background-color: #ffffff;
+    padding: 2rem 2rem;
+}
+
+#achievements h1 {
+    color: #dc3545;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.achievement-card {
+    background-color: #ffc8c8; /* Matching soft pink background */
+    border-radius: 15px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.08);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.15);
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(220, 53, 69, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-icon i {
+    font-size: 1.5rem;
+    color: #dc3545;
+}
+
+.achievement-card h3 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.achievement-card p {
+    color: #666666;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #achievements {
+        padding: 1.5rem 1rem;
+    }
+
+    #achievements h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Education Section Styles */
+#education {
+    padding: 2rem;
+}
+
+#education h1 {
+    color: #dc3545;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education-card {
+    background-color: #ffc8c8;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+}
+
+.university-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.university-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+}
+
+.graduation-date {
+    color: #dc3545;
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.degree {
+    font-size: 1.5rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+.achievements-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.achievements-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #666666;
+}
+
+.achievements-list li::before {
+    content: "•";
+    color: #dc3545;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.gpa {
+    color: #dc3545;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #education {
+        padding: 1.5rem 1rem;
+    }
+
+    .university-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .university-name {
+        font-size: 1.5rem;
+    }
+
+    .graduation-date {
+        font-size: 0.9rem;
+    }
+
+    .degree {
+        font-size: 1.25rem;
+    }
+
+    .education-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Projects Section */
+#projects {
+    padding: 2rem;
+}
+
+#projects h1,
+#projects .section-heading {
+    color: #dc3545 !important;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #ffd9d9; /* Background color only for individual cards */
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.tech-pill {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333333;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-date {
+    color: #dc3545;
+    font-style: italic;
+}
+
+.project-description {
+    color: #666666;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+/* View Code button style */
+.view-code-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #dc3545;
+    border-radius: 50px;
+    color: #dc3545;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.view-code-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #projects {
+        padding: 1.5rem 1rem;
+    }
+
+    #projects h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .project-date {
+        font-size: 0.9rem;
+    }
+
+    .tech-stack {
+        gap: 0.4rem;
+    }
+
+    .tech-pill {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+#contact h1 {
+    color: #dc3545;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-subtitle {
+    color: #666666;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #333333;
+    font-weight: 500;
+}
+
+.form-control {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.send-message-btn {
+    background-color: #9146ff;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.send-message-btn:hover {
+    background-color: #7b31f1;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contact {
+        padding: 1.5rem 1rem;
+    }
+
+    #contact h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .send-message-btn {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+/* Common heading style for all sections */
+section h1,
+.section-heading {
+    color: #dc3545 !important;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Responsive adjustments for headings */
+@media (max-width: 768px) {
+    section h1,
+    .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Skills Section */
+#skills {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: #ffc8c8;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    height: 100%;
+}
+
+.skill-category {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(220, 53, 69, 0.2);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.tech-pill {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333333;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #skills {
+        padding: 1.5rem 1rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    .skill-category {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .tech-pill {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Interests Section */
+#interests {
+    padding: 2rem;
+}
+
+.interests-description {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: #666666;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.interest-card {
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+}
+
+.interest-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.interest-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    color: white;
+}
+
+/* Background colors for each card */
+.interest-card.music {
+    background-color: #2c3e50;
+}
+
+.interest-card.travelling {
+    background-color: #8e44ad;
+}
+
+.interest-card.books {
+    background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .interests-grid {
+        grid-template-columns: repeat(1, minmax(0, 600px));
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .interest-card {
+        min-height: 200px;
+    }
+
+    .interest-card h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Experience Timeline Styles */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.circle {
+    background: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.circle.right {
+    margin-left: auto;
+}
+
+.content {
+    padding-left: 2rem;
+    flex-grow: 1;
+}
+
+.content.center {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.timeline-item h5 {
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    color: #dc3545;
+    margin: 0;
+}
+
+
+
+/* Curved lines */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 1.75rem;
+    width: calc(50% - 1.75rem);
+    height: 2px;
+    background-color: #dc3545;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 1.75rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .content.center {
+        text-align: left;
+        padding-left: 4rem;
+    }
+
+    .circle.right {
+        margin-left: 0;
+    }
+
+    .timeline-item::after {
+        display: none;
+    }
+}
